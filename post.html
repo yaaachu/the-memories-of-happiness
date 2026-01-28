@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>後記｜덕질 일기</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <h1 class="site-title" id="post-title"></h1>
+  </header>
+
+  <main style="max-width:720px;margin:0 auto;padding:0 24px 64px;">
+    <div class="meta" id="post-meta"></div>
+    <article id="post-content" style="white-space:pre-line;margin-top:24px;"></article>
+  </main>
+
+  <footer class="site-footer">
+    <p><a href="index.html">← 回到首頁</a></p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script>
+    // =====================
+    // 後記頁資料讀取
+    // =====================
+
+    const params = new URLSearchParams(window.location.search);
+    const postId = params.get('id');
+
+    const post = posts.find(p => p.id === postId);
+
+    if (!post) {
+      document.getElementById('post-title').textContent = '找不到這篇後記';
+    } else {
+      document.getElementById('post-title').textContent = post.title;
+      document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}｜${post.artist}`;
+      document.getElementById('post-content').textContent = post.content;
+    }
+  </script>
+
+</body>
+</html>
