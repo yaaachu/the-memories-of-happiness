@@ -36,7 +36,7 @@
       document.getElementById('post-title').textContent = '找不到這篇後記';
     } else {
       document.getElementById('post-title').textContent = post.title;
-      document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}｜${post.artist}`;
+      document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}`;
       document.getElementById('post-content').innerHTML = post.content;
     }
   </script>
