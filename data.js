@@ -7,7 +7,7 @@ const posts = [
     id: "2023-lee-seung-yoon",
     title: "2023 LEE SEUNG YOON CONCERT <Docking> in Taipei",
     date: "2023 / 04 / 16",
-    venue: "Legacy MAX（台北）",
+    venue: "信義劇場 Legacy MAX",
     artist: "李承允 이승윤",
     content: `
 這裡放你的第一篇後記全文。
