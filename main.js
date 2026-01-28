@@ -15,9 +15,8 @@ posts.forEach(post => {
   `;
 
   card.addEventListener('click', () => {
-    // 先用最簡單方式：alert 檢查資料
-    alert(post.title + "\n\n" + post.content);
-  });
+  window.location.href = `post.html?id=${post.id}`;
+});
 
   app.appendChild(card);
 });
