@@ -1,65 +1,68 @@
-// 演唱會後記網站初版 - React
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>덕질 일기</title>
+  <meta name="description" content="덕질 일기 — 演唱會後記回憶網站" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import { useState } from 'react';
+<!-- 密碼保護遮罩 -->
+<div id="lock" style="position:fixed;inset:0;background:#f6f6f6;display:flex;align-items:center;justify-content:center;z-index:9999;">
+<div style="background:#fff;padding:24px 28px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.1);max-width:360px;width:90%;">
+<h2 style="margin-top:0;">輸入密碼</h2>
+<p style="color:#666;">請輸入密碼以查看內容</p>
+<input id="pwd" type="password" placeholder="Password" style="width:100%;padding:10px;font-size:1em;margin:10px 0;" />
+<button id="unlock" style="width:100%;padding:10px;font-size:1em;">確定</button>
+<p id="pwd-error" style="color:#c00;display:none;margin-top:10px;">密碼錯誤</p>
+</div>
+</div>
 
-const concertData = [
-  {
-    id: "2023-docking",
-    title: "2023 LEE SEUNG YOON CONCERT <Docking> in Taipei",
-    date: "2023-04-16",
-    venue: "信義劇場Legacy MAX (台北市信義區松壽路11號6樓)",
-    artist: "李承允（이승윤）",
-    content: `你的完整後記會以段落形式渲染在這裡，目前我會先放置原始文字的佔位內容（為了展示樣式和排版）`
+  <!-- 🏠 主頁內容 -->
+  <header class="site-header">
+    <h1 class="site-title">덕질 일기</h1>
+  </header>
+
+  <main id="app" class="card-grid">
+    <!-- 演唱會卡片由 JavaScript 動態產生 -->
+  </main>
+
+  <footer class="site-footer">
+    <p>© 덕질 일기</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+
+  <script>
+  // =====================
+  // 🔐 簡易密碼保護（前端）
+  // =====================
+  const SITE_PASSWORD = '170530'; // ⚠️ 前端密碼僅為簡易保護
+  const lock = document.getElementById('lock');
+  const pwdInput = document.getElementById('pwd');
+  const unlockBtn = document.getElementById('unlock');
+  const pwdError = document.getElementById('pwd-error');
+
+  function tryUnlock() {
+    if (pwdInput.value === SITE_PASSWORD) {
+      // 不再記錄解鎖狀態，每次重新整理都需要重新輸入
+      lock.style.display = 'none';
+      pwdError.style.display = 'none';
+    } else {
+      pwdError.style.display = 'block';
+    }
   }
-];
 
-function Home() {
-  return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">덕질 일기</h1>
-      <ul className="space-y-4">
-        {concertData.map((concert) => (
-          <li key={concert.id} className="border p-4 rounded-xl shadow">
-            <Link to={`/concert/${concert.id}`} className="text-xl font-semibold text-blue-600">
-              {concert.title}
-            </Link>
-            <p className="text-sm text-gray-600">{concert.date} ・ {concert.venue}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+  // 每次重新整理都重新上鎖，不自動解鎖
 
-function ConcertDetail({ id }) {
-  const concert = concertData.find((c) => c.id === id);
-  if (!concert) return <div>找不到資料</div>;
-  return (
-    <div className="p-6">
-      <h1 className="text-2xl font-bold mb-2">{concert.title}</h1>
-      <p className="text-sm text-gray-600 mb-4">{concert.date} ・ {concert.venue}</p>
-      <div className="whitespace-pre-wrap leading-relaxed">
-        {concert.content}
-      </div>
-      <Link to="/" className="text-blue-500 mt-4 inline-block">← 返回首頁</Link>
-    </div>
-  );
-}
+  unlockBtn.addEventListener('click', tryUnlock);
+  pwdInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') tryUnlock();
+  });
+  </script>
 
-function App() {
-  const [path, setPath] = useState(window.location.pathname);
-  const match = path.match(/\/concert\/(.+)/);
-  const id = match?.[1];
-
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/concert/:id" element={<ConcertDetail id={id} />} />
-      </Routes>
-    </Router>
-  );
-}
-
-export default App;
+</body>
+</html>
