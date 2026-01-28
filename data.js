@@ -8,7 +8,6 @@ const posts = [
     title: "2023 LEE SEUNG YOON CONCERT <Docking> in Taipei",
     date: "2023 / 04 / 16",
     venue: "信義劇場 Legacy MAX",
-    artist: "이승윤",
     content: `
 這裡放你的第一篇後記全文。
 
@@ -22,7 +21,6 @@ const posts = [
     title: "PEAK TIME",
     date: "2023 / 07 / 15",
     venue: "",
-    artist: "",
     content: `
     `
   },
@@ -31,7 +29,6 @@ const posts = [
     title: "FAN CONCERT",
     date: "2023 / 09 / 09",
     venue: "",
-    artist: "",
     content: `
     `
   }
