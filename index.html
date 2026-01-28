@@ -1,0 +1,65 @@
+// 演唱會後記網站初版 - React
+
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
+
+const concertData = [
+  {
+    id: "2023-docking",
+    title: "2023 LEE SEUNG YOON CONCERT <Docking> in Taipei",
+    date: "2023-04-16",
+    venue: "信義劇場Legacy MAX (台北市信義區松壽路11號6樓)",
+    artist: "李承允（이승윤）",
+    content: `你的完整後記會以段落形式渲染在這裡，目前我會先放置原始文字的佔位內容（為了展示樣式和排版）`
+  }
+];
+
+function Home() {
+  return (
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-4">덕질 일기</h1>
+      <ul className="space-y-4">
+        {concertData.map((concert) => (
+          <li key={concert.id} className="border p-4 rounded-xl shadow">
+            <Link to={`/concert/${concert.id}`} className="text-xl font-semibold text-blue-600">
+              {concert.title}
+            </Link>
+            <p className="text-sm text-gray-600">{concert.date} ・ {concert.venue}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ConcertDetail({ id }) {
+  const concert = concertData.find((c) => c.id === id);
+  if (!concert) return <div>找不到資料</div>;
+  return (
+    <div className="p-6">
+      <h1 className="text-2xl font-bold mb-2">{concert.title}</h1>
+      <p className="text-sm text-gray-600 mb-4">{concert.date} ・ {concert.venue}</p>
+      <div className="whitespace-pre-wrap leading-relaxed">
+        {concert.content}
+      </div>
+      <Link to="/" className="text-blue-500 mt-4 inline-block">← 返回首頁</Link>
+    </div>
+  );
+}
+
+function App() {
+  const [path, setPath] = useState(window.location.pathname);
+  const match = path.match(/\/concert\/(.+)/);
+  const id = match?.[1];
+
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/concert/:id" element={<ConcertDetail id={id} />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
