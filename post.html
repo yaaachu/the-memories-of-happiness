@@ -37,7 +37,7 @@
     } else {
       document.getElementById('post-title').textContent = post.title;
       document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}｜${post.artist}`;
-      document.getElementById('post-content').textContent = post.content;
+      document.getElementById('post-content').innerHTML = post.content;
     }
   </script>
 
