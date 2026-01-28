@@ -51,7 +51,6 @@ if (!posts || posts.length === 0) {
         <h3>${post.title}</h3>
         ${post.date ? `<div class="meta">${post.date}</div>` : ''}
         ${post.venue ? `<div class="meta">${post.venue}</div>` : ''}
-        ${post.artist ? `<div class="meta">${post.artist}</div>` : ''}
       `;
       card.addEventListener('click', () => {
         window.location.href = `post.html?id=${post.id}`;
