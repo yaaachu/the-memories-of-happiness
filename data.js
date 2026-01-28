@@ -19,7 +19,7 @@ const posts = [
   },
   {
     id: "20230715",
-    title: "",
+    title: "PEAK TIME",
     date: "2023 / 07 / 15",
     venue: "",
     artist: "",
@@ -28,7 +28,7 @@ const posts = [
   },
   {
     id: "20230909",
-    title: "",
+    title: "FAN CONCERT",
     date: "2023 / 09 / 09",
     venue: "",
     artist: "",
