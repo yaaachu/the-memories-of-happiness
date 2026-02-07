@@ -8,7 +8,8 @@ const posts = [
     title: "2023 LEE SEUNG YOON CONCERT <Docking> in Taipei",
     date: "2023 / 04 / 16",
     venue: "信義劇場 Legacy MAX",
-    contentFile: "20230416.html"
+    content: `
+    `
   },
   {
     id: "20230715",
