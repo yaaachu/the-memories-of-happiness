@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>후기｜덕질 일기</title>
+  <title>後記｜덕질 일기</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -30,14 +30,24 @@
     const params = new URLSearchParams(window.location.search);
     const postId = params.get('id');
 
-    const post = posts.find(p => p.id.toString() === postId);
+    const post = posts.find(p => p.id === postId);
 
     if (!post) {
       document.getElementById('post-title').textContent = '找不到這篇後記';
     } else {
       document.getElementById('post-title').textContent = post.title;
-      document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}`;
-      document.getElementById('post-content').innerHTML = post.content;
+      document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}｜${post.artist}`;
+
+      // 讀取獨立後記檔案
+      fetch(post.contentFile)
+        .then(res => res.text())
+        .then(html => {
+          document.getElementById('post-content').innerHTML = html;
+        })
+        .catch(() => {
+          document.getElementById('post-content').textContent = '後記內容載入失敗';
+        });
+    }
     }
   </script>
 
