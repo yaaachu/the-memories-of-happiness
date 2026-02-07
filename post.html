@@ -21,35 +21,38 @@
     <p><a href="index.html">← 回到首頁</a></p>
   </footer>
 
-  <script src="data.js"></script>
-  <script>
-    // =====================
-    // 後記頁資料讀取
-    // =====================
+<script src="data.js"></script>
+<script>
+  // =====================
+  // 後記頁資料讀取
+  // =====================
 
-    const params = new URLSearchParams(window.location.search);
-    const postId = params.get('id');
+  const params = new URLSearchParams(window.location.search);
+  const postId = params.get('id');
 
-    const post = posts.find(p => p.id === postId);
+  console.log("postId =", postId);
 
-    if (!post) {
-      document.getElementById('post-title').textContent = '找不到這篇後記';
-    } else {
-      document.getElementById('post-title').textContent = post.title;
-      document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}｜${post.artist}`;
+  const post = posts.find(p => p.id === postId);
 
-      // 讀取獨立後記檔案
-      fetch("20230416.html")
-        .then(res => res.text())
-        .then(html => {
-          document.getElementById('post-content').innerHTML = html;
-        })
-        .catch(() => {
-          document.getElementById('post-content').textContent = '後記內容載入失敗';
-        });
-    }
-    }
-  </script>
+  if (!post) {
+    document.getElementById('post-title').textContent = '找不到這篇後記';
+  } else {
+    document.getElementById('post-title').textContent = post.title;
+    document.getElementById('post-meta').textContent =
+      `${post.date}｜${post.venue}｜${post.artist}`;
+
+    // 依照 id 載入對應 html 檔
+    fetch(`${post.id}.html`)
+      .then(res => res.text())
+      .then(html => {
+        document.getElementById('post-content').innerHTML = html;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById('post-content').textContent = '後記內容載入失敗';
+      });
+  }
+</script>
 
 </body>
 </html>
