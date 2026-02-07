@@ -39,7 +39,7 @@
       document.getElementById('post-meta').textContent = `${post.date}｜${post.venue}｜${post.artist}`;
 
       // 讀取獨立後記檔案
-      fetch(post.contentFile)
+      fetch("20230416.html")
         .then(res => res.text())
         .then(html => {
           document.getElementById('post-content').innerHTML = html;
