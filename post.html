@@ -43,14 +43,17 @@
 
     // 依照 id 載入對應 html 檔
     fetch(`${post.id}.html`)
-      .then(res => res.text())
-      .then(html => {
-        document.getElementById('post-content').innerHTML = html;
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById('post-content').textContent = '後記內容載入失敗';
-      });
+    .then(res => {
+      if (!res.ok) throw new Error("HTML 檔案不存在或路徑錯誤");
+      return res.text();
+    })
+    .then(html => {
+      document.getElementById('post-content').innerHTML = html;
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('post-content').textContent = '後記內容載入失敗';
+    });
   }
 </script>
 
