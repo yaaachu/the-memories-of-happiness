@@ -39,7 +39,7 @@
   } else {
     document.getElementById('post-title').textContent = post.title;
     document.getElementById('post-meta').textContent =
-      `${post.date}｜${post.venue}｜${post.artist}`;
+      `${post.date}｜${post.venue}`;
 
     // 依照 id 載入對應 html 檔
     fetch(`${post.id}.html`)
