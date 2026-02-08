@@ -104,7 +104,15 @@ body {
   margin: 0 auto;
   padding: 0 24px 64px;
 }
+.post-layout {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
 
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
 /* =====================
    後記目錄
 ===================== */
@@ -112,9 +120,13 @@ body {
   width: 200px;
   flex-shrink: 0;
 
+  position: sticky;
+  top: 100px;
+  
   background: #f3eee7;
   padding: 24px 24px 20px;
   border-radius: 8px;
+  font-size: 14px;
 }
 
 .toc-title {
@@ -148,10 +160,7 @@ body {
    後記紙張本體
 ===================== */
 .post-paper {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 40px;
+  flex: 1;
   background: #faf7f2; /* 微米色、像日記紙 */
   padding: 48px 40px;
   border-radius: 10px;
