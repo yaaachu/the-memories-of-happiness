@@ -109,18 +109,12 @@ body {
    後記目錄
 ===================== */
 .post-toc {
-  width: 180px;
+  width: 200px;
   flex-shrink: 0;
-
-  position: sticky;
-  top: 100px;
-
-  align-self: flex-start;
 
   background: #f3eee7;
   padding: 24px 24px 20px;
   border-radius: 8px;
-  margin-bottom: 40px;
 }
 
 .toc-title {
@@ -154,8 +148,9 @@ body {
    後記紙張本體
 ===================== */
 .post-paper {
-  position: relative;
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
   gap: 40px;
   background: #faf7f2; /* 微米色、像日記紙 */
   padding: 48px 40px;
