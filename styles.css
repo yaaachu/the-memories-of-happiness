@@ -118,15 +118,15 @@ body {
 ===================== */
 .post-toc {
   width: 200px;
-  flex-shrink: 0;
 
   position: sticky;
   top: 100px;
-  
+  margin-left: calc(50% - 720px / 2 - 220px);
   background: #f3eee7;
   padding: 24px 24px 20px;
   border-radius: 8px;
   font-size: 14px;
+  z-index: 10;
 }
 
 .toc-title {
@@ -160,7 +160,8 @@ body {
    後記紙張本體
 ===================== */
 .post-paper {
-  flex: 1;
+  max-width: 720px;
+  margin: 0 auto;
   background: #faf7f2; /* 微米色、像日記紙 */
   padding: 48px 40px;
   border-radius: 10px;
