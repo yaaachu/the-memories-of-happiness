@@ -52,14 +52,17 @@
     document.getElementById('post-meta').textContent =
       `${post.date}｜${post.venue}`;
 
-    // 依照 id 載入對應 html 檔
-    fetch(`${post.id}.html`)
+  // =====================
+  // 後記內容載入
+  // =====================
+  fetch(`${post.id}.html`)
     .then(res => {
-      if (!res.ok) throw new Error("HTML 檔案不存在或路徑錯誤");
+      if (!res.ok) throw new Error('HTML 檔案不存在');
       return res.text();
     })
     .then(html => {
       document.getElementById('post-content').innerHTML = html;
+
       generateTOC();
       initScrollSpy();
     })
@@ -67,7 +70,10 @@
       console.error(err);
       document.getElementById('post-content').textContent = '後記內容載入失敗';
     });
-  }
+
+  // =====================
+  // 產生目錄
+  // =====================
   function generateTOC() {
     const tocWrapper = document.getElementById('toc');
     const tocList = tocWrapper.querySelector('ul');
@@ -78,7 +84,7 @@
       return;
     }
 
-    tocList.innerHTML = ''; // 清空避免重複
+    tocList.innerHTML = '';
 
     headings.forEach((h, index) => {
       const id = `section-${index}`;
@@ -93,13 +99,17 @@
       li.appendChild(a);
       tocList.appendChild(li);
     });
+  }
 
-    function initScrollSpy() {
-    const headings = document.querySelectorAll('#post-content h3');
+  // =====================
+  // Scroll Spy（目錄高亮）
+  // =====================
+  function initScrollSpy() {
+    const headings = document.querySelectorAll('#post-content h2, #post-content h3');
     const tocLinks = document.querySelectorAll('.post-toc a');
 
     const observer = new IntersectionObserver(
-      (entries) => {
+      entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const id = entry.target.id;
@@ -122,7 +132,6 @@
     headings.forEach(h => observer.observe(h));
   }
 
-  }
 </script>
 
 </body>
