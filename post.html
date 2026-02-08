@@ -71,6 +71,8 @@
     const tocWrapper = document.getElementById('toc');
     const tocList = tocWrapper.querySelector('ul');
     const headings = document.querySelectorAll('#post-content h3');
+    const text = h.dataset.toc || h.textContent;
+    a.textContent = text;
 
     if (!headings.length) {
       tocWrapper.style.display = 'none';
@@ -84,7 +86,7 @@
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = `#${id}`;
-      a.textContent = h.textContent;
+      a.textContent = h.dataset.toc || h.textContent;
 
       li.appendChild(a);
       tocList.appendChild(li);
