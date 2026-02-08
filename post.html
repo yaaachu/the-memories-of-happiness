@@ -64,7 +64,6 @@
       document.getElementById('post-content').innerHTML = html;
 
       generateTOC();
-      initScrollSpy();
     })
     .catch(err => {
       console.error(err);
@@ -77,7 +76,7 @@
   function generateTOC() {
     const tocWrapper = document.getElementById('toc');
     const tocList = tocWrapper.querySelector('ul');
-    const headings = document.querySelectorAll('#post-content h2, #post-content h3');
+    const headings = document.querySelectorAll('#post-content h3');
 
     if (!headings.length) {
       tocWrapper.style.display = 'none';
@@ -99,37 +98,6 @@
       li.appendChild(a);
       tocList.appendChild(li);
     });
-  }
-
-  // =====================
-  // Scroll Spy（目錄高亮）
-  // =====================
-  function initScrollSpy() {
-    const headings = document.querySelectorAll('#post-content h2, #post-content h3');
-    const tocLinks = document.querySelectorAll('.post-toc a');
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            const id = entry.target.id;
-
-            tocLinks.forEach(link => {
-              link.classList.toggle(
-                'active',
-                link.getAttribute('href') === `#${id}`
-              );
-            });
-          }
-        });
-      },
-      {
-        rootMargin: '-40% 0px -55% 0px',
-        threshold: 0
-      }
-    );
-
-    headings.forEach(h => observer.observe(h));
   }
 
 </script>
