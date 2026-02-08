@@ -146,12 +146,19 @@ body {
    後記紙張本體
 ===================== */
 .post-paper {
+  position: relative;
+  display: flex;
+  gap: 40px;
   background: #faf7f2; /* 微米色、像日記紙 */
   padding: 48px 40px;
   border-radius: 10px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
-
+/* 內文區 */
+.post-body {
+  flex: 1;
+  min-width: 0;
+}
 /* =====================
    後記資訊列
 ===================== */
