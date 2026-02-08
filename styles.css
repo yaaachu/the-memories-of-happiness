@@ -154,6 +154,7 @@ body {
    後記紙張本體
 ===================== */
 .content-column {
+  min-width: 0;
   display: flex;
   justify-content: center;
 }
