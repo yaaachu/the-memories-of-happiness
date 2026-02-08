@@ -102,7 +102,7 @@ body {
 .post-page {
   display: grid;
   grid-template-columns: 220px 1fr;
-  gap: 32px;
+  gap: 9px;
 
   max-width: 1200px;
   margin: 0 auto;
