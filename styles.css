@@ -91,7 +91,7 @@ body {
   font-weight: 600;
 }
 
-.card .meta {
+.card {
   font-size: .85rem;
   color: #777;
 }
@@ -102,7 +102,7 @@ body {
 .post-wrapper {
   max-width: 720px;
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 0 24px 64px;
 }
 
 /* =====================
@@ -119,8 +119,8 @@ body {
    後記資訊列
 ===================== */
 .meta {
-  font-size: 14px;
-  color: #7a6f64;
+  font-size: .85rem;
+  color: #777;
   margin-bottom: 32px;
   padding-bottom: 12px;
   border-bottom: 1px dashed #cfc6bb;
