@@ -183,12 +183,11 @@ body {
 }
 
 @media (max-width: 768px) {
-  .post-paper {
-    flex-direction: column;
+  .post-page {
+    grid-template-columns: 1fr;
   }
 
   .post-toc {
-    width: 100%;
     position: static;
     margin-bottom: 32px;
   }
