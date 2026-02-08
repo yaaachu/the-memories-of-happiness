@@ -61,6 +61,7 @@
     .then(html => {
       document.getElementById('post-content').innerHTML = html;
       generateTOC();
+      initScrollSpy();
     })
     .catch(err => {
       console.error(err);
@@ -92,6 +93,35 @@
       li.appendChild(a);
       tocList.appendChild(li);
     });
+
+    function initScrollSpy() {
+    const headings = document.querySelectorAll('#post-content h3');
+    const tocLinks = document.querySelectorAll('.post-toc a');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.id;
+
+            tocLinks.forEach(link => {
+              link.classList.toggle(
+                'active',
+                link.getAttribute('href') === `#${id}`
+              );
+            });
+          }
+        });
+      },
+      {
+        rootMargin: '-40% 0px -55% 0px',
+        threshold: 0
+      }
+    );
+
+    headings.forEach(h => observer.observe(h));
+  }
+
   }
 </script>
 
