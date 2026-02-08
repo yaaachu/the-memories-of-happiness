@@ -65,7 +65,8 @@
       content.innerHTML = html;
       generateTOC();
     })
-    .catch(() => {
+    .catch(err => {
+      console.error(err);
       document.getElementById('post-content').textContent = '後記內容載入失敗';
     });
 
