@@ -149,18 +149,7 @@ body {
 .post-toc a:hover {
   text-decoration: underline;
 }
-/* =====================
-   目錄高亮狀態
-===================== */
-.post-toc a.active {
-  font-weight: 600;
-  color: #000;
-}
 
-.post-toc a.active::before {
-  content: "› ";
-  color: #6f665c;
-}
 /* =====================
    後記紙張本體
 ===================== */
