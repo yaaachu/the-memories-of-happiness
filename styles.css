@@ -214,7 +214,7 @@ body {
   background: #2e2e2e;
   color: #fff;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   display: none; /* 預設隱藏 */
   z-index: 999;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
