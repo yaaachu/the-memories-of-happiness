@@ -99,34 +99,28 @@ body {
 /* =====================
    後記頁整體區域
 ===================== */
-.post-wrapper {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 0 24px 64px;
-}
-.post-layout {
-  max-width: 960px;
+.post-page {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+
+  max-width: 1200px;
   margin: 0 auto;
   padding: 40px 24px 80px;
-
-  display: flex;
-  gap: 32px;
-  align-items: flex-start;
 }
 /* =====================
    後記目錄
 ===================== */
+.toc-column {
+  position: relative;
+}
 .post-toc {
-  width: 200px;
-
   position: sticky;
   top: 100px;
-  margin-left: calc(50% - 720px / 2 - 220px);
   background: #f3eee7;
   padding: 24px 24px 20px;
   border-radius: 8px;
   font-size: 14px;
-  z-index: 10;
 }
 
 .toc-title {
@@ -159,18 +153,17 @@ body {
 /* =====================
    後記紙張本體
 ===================== */
+.content-column {
+  display: flex;
+  justify-content: center;
+}
 .post-paper {
+  width: 100%;
   max-width: 720px;
-  margin: 0 auto;
   background: #faf7f2; /* 微米色、像日記紙 */
   padding: 48px 40px;
   border-radius: 10px;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-}
-/* 內文區 */
-.post-body {
-  flex: 1;
-  min-width: 0;
 }
 /* =====================
    後記資訊列
