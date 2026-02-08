@@ -205,10 +205,10 @@ body {
 
 #back-to-top {
   position: fixed;
-  bottom: 320px;
-  right: 320px;
-  width: 92px;
-  height: 92px;
+  bottom: 92px;
+  right: 92px;
+  width: 34px;
+  height: 34px;
   border: none;
   border-radius: 50%;
   background: #2e2e2e;
