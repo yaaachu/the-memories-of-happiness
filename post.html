@@ -61,8 +61,8 @@
       return res.text();
     })
     .then(html => {
-      document.getElementById('post-content').innerHTML = html;
-
+      const content = document.getElementById('post-content');
+      content.innerHTML = html;
       generateTOC();
     })
     .catch(err => {
