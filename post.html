@@ -56,12 +56,36 @@
     })
     .then(html => {
       document.getElementById('post-content').innerHTML = html;
+      generateTOC();
     })
     .catch(err => {
       console.error(err);
       document.getElementById('post-content').textContent = '後記內容載入失敗';
     });
   }
+  function generateTOC() {
+    const tocWrapper = document.getElementById('toc');
+    const tocList = tocWrapper.querySelector('ul');
+    const headings = document.querySelectorAll('#post-content h3');
+
+    if (!headings.length) {
+      tocWrapper.style.display = 'none';
+      return;
+    }
+
+    headings.forEach((h, index) => {
+      const id = `section-${index}`;
+      h.id = id;
+
+      const li = document.createElement('li');
+      const a = document.createElement('a');
+      a.href = `#${id}`;
+      a.textContent = h.textContent;
+
+      li.appendChild(a);
+      tocList.appendChild(li);
+  });
+}
 </script>
 
 </body>
