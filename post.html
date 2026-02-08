@@ -70,13 +70,14 @@
   function generateTOC() {
     const tocWrapper = document.getElementById('toc');
     const tocList = tocWrapper.querySelector('ul');
-    const text = h.dataset.toc || h.textContent;
-    a.textContent = text;
+    const headings = document.querySelectorAll('#post-content h2, #post-content h3');
 
     if (!headings.length) {
       tocWrapper.style.display = 'none';
       return;
     }
+
+    tocList.innerHTML = ''; // 清空避免重複
 
     headings.forEach((h, index) => {
       const id = `section-${index}`;
@@ -84,13 +85,14 @@
 
       const li = document.createElement('li');
       const a = document.createElement('a');
+
       a.href = `#${id}`;
       a.textContent = h.dataset.toc || h.textContent;
 
       li.appendChild(a);
       tocList.appendChild(li);
-  });
-}
+    });
+  }
 </script>
 
 </body>
