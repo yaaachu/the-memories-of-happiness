@@ -70,7 +70,6 @@
   function generateTOC() {
     const tocWrapper = document.getElementById('toc');
     const tocList = tocWrapper.querySelector('ul');
-    const headings = document.querySelectorAll('#post-content h3');
     const text = h.dataset.toc || h.textContent;
     a.textContent = text;
 
