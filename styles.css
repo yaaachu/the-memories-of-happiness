@@ -109,6 +109,14 @@ body {
    後記目錄
 ===================== */
 .post-toc {
+  width: 180px;
+  flex-shrink: 0;
+
+  position: sticky;
+  top: 100px;
+
+  align-self: flex-start;
+
   background: #f3eee7;
   padding: 24px 24px 20px;
   border-radius: 8px;
@@ -173,6 +181,18 @@ body {
 #post-content {
   font-family: "Noto Serif TC", serif;
   color: #2e2e2e;
+}
+
+@media (max-width: 768px) {
+  .post-paper {
+    flex-direction: column;
+  }
+
+  .post-toc {
+    width: 100%;
+    position: static;
+    margin-bottom: 32px;
+  }
 }
 
 /* Footer */
