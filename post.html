@@ -31,13 +31,27 @@
   <footer class="site-footer">
     <p><a href="index.html">← 回到首頁</a></p>
   </footer>
-
+  
+  <button id="back-to-top" title="回到頂端">↑</button>
+  
 <script src="data.js"></script>
 <script>
   // =====================
   // 後記頁資料讀取
   // =====================
 
+  const backToTop = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTop.style.display = 'block';
+    } else {
+      backToTop.style.display = 'none';
+    }
+  });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+  
   const params = new URLSearchParams(window.location.search);
   const postId = params.get('id');
 
