@@ -8,7 +8,7 @@ const posts = [
     title: "2023 LEE SEUNG YOON CONCERT <Docking> in Taipei",
     date: "2023 / 04 / 16  18:00",
     venue: "📍 信義劇場 Legacy MAX （臺北新光三越 A11 6F）",
-    tags: ["콘서트"],
+    tags: ["콘서트", "이승윤"],
     link: "20230416.html"
   },
   {
