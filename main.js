@@ -96,7 +96,6 @@ if (!posts || posts.length === 0) {
       });
       app.appendChild(card);
     });
-  }
 
   // ===== 設定哪個按鈕是 active 狀態 =====
   function setActiveButton(button) {
