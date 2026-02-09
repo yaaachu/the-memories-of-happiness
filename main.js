@@ -106,4 +106,3 @@ if (!posts || posts.length === 0) {
 
   // 預設渲染全部卡片
   renderCards();
-}
