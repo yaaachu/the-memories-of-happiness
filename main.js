@@ -89,7 +89,7 @@ if (!posts || posts.length === 0) {
         <h3>${post.title}</h3>
         ${post.date ? `<div class="meta">${post.date}</div>` : ''}
         ${post.venue ? `<div class="meta">${post.venue}</div>` : ''}
-        ${post.tags ? `  <div class="tag-row">${post.tags.map(t => `<span>#${t}</span>`).join(' ')</div>` : ''}
+        ${post.tags ? `  <div class="tag-row">${post.tags.map(t => `<span>#${t}</span>`).join(' ')}</div>` : ''}
       `;
       card.addEventListener('click', () => {
         window.location.href = `post.html?id=${post.id}`;
