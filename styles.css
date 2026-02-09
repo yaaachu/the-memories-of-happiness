@@ -61,6 +61,35 @@ body {
   border-radius: 4px;
 }
 
+/* 左側標籤 */
+.tag-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 24px;
+}
+
+.tag-btn {
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.tag-btn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+.tag-row {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
 /* 卡片排列 */
 .card-grid {
   flex: 1; /* 右側占滿剩餘空間 */
