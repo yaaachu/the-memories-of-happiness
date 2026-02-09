@@ -8,6 +8,7 @@ let activeTags = new Set();
 if (!posts || posts.length === 0) {
   app.textContent = "目前沒有任何後記。";
 } else {
+  let currentYear = null;
   // 取得所有年份，排序新到舊
   const years = [...new Set(posts.map(post => post.date.split('/')[0].trim()))].sort((a,b) => b - a);
   const allTags = [...new Set(posts.flatMap(post => post.tags || []))];
