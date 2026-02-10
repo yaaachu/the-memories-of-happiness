@@ -73,20 +73,22 @@ body {
 .tag-btn {
   display: inline-block;
   width: auto;
-  border: 1px solid #ccc;
-  background: #fff;
+  border:none;
+  background: #f4f4f4;
   padding: 3px 7px;
-  border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
-  color: #2e2e2e;
+  color: #555;
   transition: background-color 0.2s, color 0.2s;
+}
+
+.tag-btn:hover {
+  background: #e0e0e0;
 }
 
 .tag-btn.active {
   background: #2e2e2e;
   color: #fff;
-  border-radius: 4px;
 }
 
 .tag-row {
