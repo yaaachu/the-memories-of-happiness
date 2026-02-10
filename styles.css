@@ -64,16 +64,18 @@ body {
 /* 左側標籤 */
 .tag-filter {
   display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+  flex-direction: column;
+  gap: 7px;
   margin: 16px 0 24px;
+  align-items: flex-start;  /* ← 不要撐滿寬度 */
 }
 
 .tag-btn {
   display: inline-block;
+  width: auto;
   border: 1px solid #ccc;
   background: #fff;
-  padding: 4px 10px;
+  padding: 3px 7px;
   border-radius: 4px;
   font-size: 14px;
   cursor: pointer;
