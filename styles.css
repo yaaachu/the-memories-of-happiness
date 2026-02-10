@@ -71,8 +71,6 @@ body {
 
 .tag-btn {
   display: inline-flex;
-  width: 100%;
-  margin-bottom: 8px;
   border: 1px solid #ccc;
   background: #fff;
   padding: 4px 10px;
@@ -86,7 +84,6 @@ body {
 .tag-btn.active {
   background: #2e2e2e;
   color: #fff;
-  border-color: #2e2e2e;
   border-radius: 4px;
 }
 
