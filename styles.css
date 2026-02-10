@@ -70,7 +70,7 @@ body {
 }
 
 .tag-btn {
-  display: inline-flex;
+  display: inline-block;
   border: 1px solid #ccc;
   background: #fff;
   padding: 4px 10px;
