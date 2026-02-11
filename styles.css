@@ -61,16 +61,27 @@ body {
   border-radius: 4px;
 }
 
+.main-container {
+  display: flex;
+  gap: 40px;
+}
+
+.content-area {
+  flex: 1;
+}
+
 /* 左側標籤 */
 .tag-filter {
   display: flex;
+  flex-direction: column;
   gap: 7px;
   margin: 0 0 20px;
   max-width: 900px;
 }
 
 .tag-btn {
-  appearance: none;
+  display: inline-block;
+  width: auto;
   border:none;
   padding: 3px 7px;
   font-size: 14px;
