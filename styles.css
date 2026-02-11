@@ -68,7 +68,6 @@ body {
 /* 左側標籤 */
 .tag-filter {
   display: flex;
-  flex-direction: column;
   gap: 7px;
   margin: 0 0 20px;
 }
