@@ -15,6 +15,22 @@ if (!posts || posts.length === 0) {
     
   const allTags = [...new Set(posts.flatMap(post => post.tags || []))];
 
+  // ===== 標籤排序邏輯 =====
+
+  // 1️⃣ 定義類型順序（固定）
+  const typeOrder = ["라이브뷰잉", "콘서트", "영화", "뮤직컬"];
+
+  // 2️⃣ 分類型與藝人
+  const typeTags = allTags.filter(tag => typeOrder.includes(tag));
+  const artistTags = allTags.filter(tag => !typeOrder.includes(tag));
+
+  // 3️⃣ 排序
+  typeTags.sort((a, b) => typeOrder.indexOf(a) - typeOrder.indexOf(b));
+  artistTags.sort((a, b) => a.localeCompare(b, 'ko'));
+
+  // 4️⃣ 合併
+  const sortedTags = [...typeTags, ...artistTags];
+
   // ===== 左側年份目錄 =====
   const allBtn = document.createElement('button');
   allBtn.textContent = '全部';
@@ -38,7 +54,7 @@ if (!posts || posts.length === 0) {
   });
 
   // ===== 標籤篩選 =====
-  allTags.forEach(tag => {
+  sortedTags.forEach(tag => {
     const btn = document.createElement('button');
     btn.className = 'tag-btn';
     btn.textContent = `#${tag}`;
