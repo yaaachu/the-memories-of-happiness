@@ -64,31 +64,30 @@ body {
 /* 左側標籤 */
 .tag-filter {
   display: flex;
-  flex-direction: column;
   gap: 7px;
-  margin: 16px 0 24px;
-  align-items: flex-start;  /* ← 不要撐滿寬度 */
+  margin: 0 0 20px;
+  max-width: 900px;
 }
 
 .tag-btn {
-  display: inline-block;
-  width: auto;
+  appearance: none;
   border:none;
-  background: #f4f4f4;
   padding: 3px 7px;
   font-size: 14px;
   cursor: pointer;
-  color: #555;
+  color: #57595B;
   transition: background-color 0.2s, color 0.2s;
 }
 
 .tag-btn:hover {
-  background: #e0e0e0;
+  font-weight: bold;
 }
 
 .tag-btn.active {
-  background: #2e2e2e;
-  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-bottom: 2px solid #2e2e2e; /* 加上深灰色底線 */
+  color: #57595B;
 }
 
 .tag-row {
@@ -109,6 +108,8 @@ body {
 /* 單張卡片 */
 .card {
   background: #fff;
+  font-size: .85rem;
+  color: #777;
   border-radius: 14px;
   padding: 20px 18px 24px;
   box-shadow: 0 10px 28px rgba(0,0,0,0.08);
@@ -125,11 +126,6 @@ body {
   margin: 0 0 8px;
   font-size: 1.05rem;
   font-weight: 600;
-}
-
-.card {
-  font-size: .85rem;
-  color: #777;
 }
 
 /* =====================
