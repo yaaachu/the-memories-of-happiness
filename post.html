@@ -64,7 +64,7 @@
   } else {
     document.getElementById('post-title').textContent = post.title;
     document.getElementById('post-meta').textContent =
-      `${post.date}｜${post.venue}`;
+      `${post.date}｜${post.venue} ${post.fellow ? `｜${post.fellow}` : ''}`;
 
   // =====================
   // 後記內容載入
