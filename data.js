@@ -4,6 +4,36 @@
 
 const posts = [
   {
+    id: "20220226",
+    title: "Phantom: The Musical Live",
+    date: "2022 / 02 / 26 14:00",
+    venue: "📍 어느 威秀",
+    fellow: "with Trista",
+    tags: ["규현", "뮤직컬"],
+    content: `
+    `
+  },
+  {
+    id: "20230305",
+    title: "WERTHER: THE MUSICAL",
+    date: "2023 / 03 / 05 13:05",
+    venue: "📍 中和威秀",
+    fellow: "with Polin",
+    tags: ["규현", "뮤직컬"],
+    content: `
+    `
+  },
+  {
+    id: "20230311",
+    title: "WERTHER: THE MUSICAL",
+    date: "2023 / 03 / 11 14:30",
+    venue: "📍 어느 威秀",
+    fellow: "with Trista",
+    tags: ["규현", "뮤직컬"],
+    content: `
+    `
+  },
+  {
     id: "20230416",
     title: "2023 LEE SEUNG YOON CONCERT <Docking> in Taipei",
     date: "2023 / 04 / 16  18:00",
