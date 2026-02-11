@@ -61,11 +61,6 @@ body {
   border-radius: 4px;
 }
 
-.main-container {
-  display: flex;
-  gap: 40px;
-}
-
 .content-area {
   flex: 1;
 }
