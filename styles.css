@@ -80,11 +80,13 @@ body {
   padding: 3px 7px;
   font-size: 14px;
   cursor: pointer;
+  background: transparent;
   color: #57595B;
-  transition: background-color 0.2s, color 0.2s;
+  transition: color 0.2s;
 }
 
 .tag-btn:hover {
+  background: transparent;
   font-weight: bold;
 }
 
@@ -93,6 +95,7 @@ body {
   border: none;
   border-bottom: 2px solid #2e2e2e; /* 加上深灰色底線 */
   color: #57595B;
+  background: transparent;
 }
 
 .tag-row {
