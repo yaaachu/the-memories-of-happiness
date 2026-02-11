@@ -24,6 +24,10 @@ body {
   letter-spacing: 0.08em;
 }
 
+.fellow {
+  font-size: 0.7em;
+  color: #E0D9D9;
+}
 /* ===== 新增：左右排版 ===== */
 .main-container {
   display: flex;
