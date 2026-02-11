@@ -63,8 +63,13 @@
     document.getElementById('post-title').textContent = '找不到這篇後記';
   } else {
     document.getElementById('post-title').textContent = post.title;
-    document.getElementById('post-meta').textContent =
-      `${post.date}｜${post.venue} ${post.fellow ? `｜${post.fellow}` : ''}`;
+    const metaEl = document.getElementById('post-meta');
+
+    metaEl.innerHTML = `
+      ${post.date} ｜ 
+      ${post.venue}
+      ${post.fellow ? `<span class="fellow">${post.fellow}</span>` : ''}
+    `;
 
   // =====================
   // 後記內容載入
