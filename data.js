@@ -92,10 +92,9 @@ const posts = [
   {
     id: "20250525",
     title: "J-hope tour 'HOPE ON THE STAGE' in TAIPEI",
-    date: "2025 / 05 / 25",
-    venue: "",
-    content: `
-    `
+    date: "2025 / 05 / 25 18:00",
+    venue: "📍國立體育大學綜合體育館（林口體育館）",
+    link: "20250525.html"
   },
   {
     id: "20250906",
