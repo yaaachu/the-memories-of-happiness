@@ -114,6 +114,10 @@
       a.href = `#${id}`;
       a.textContent = h.dataset.toc || h.textContent;
 
+      if (h.tagName === 'H4') {
+        li.classList.add('toc-sub');
+      }
+      
       li.appendChild(a);
       tocList.appendChild(li);
     });
