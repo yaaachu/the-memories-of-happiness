@@ -114,11 +114,6 @@
       a.href = `#${id}`;
       a.textContent = h.dataset.toc || h.textContent;
 
-      // ⭐ 判斷是 h3 還是 h4
-      if (heading.tagName === 'H4') {
-        li.classList.add('toc-sub'); // 給 h4 特別 class
-      }
-
       li.appendChild(a);
       tocList.appendChild(li);
     });
