@@ -228,7 +228,7 @@ body {
    後記內文
 ===================== */
 #post-content {
-  font-family: "Noto Serif TC", serif;
+  font-family: "Noto Serif TC" , "Batang" , serif;
   color: #2e2e2e;
 }
 
@@ -243,6 +243,20 @@ body {
   }
 }
 
+#post-content ul, ol {
+    margin-top: -7px;
+    padding-top: 0;
+}
+#post-content li {
+    margin-bottom: -20px;
+}
+#post-content h3, h4 {
+    margin-bottom: -18px;
+}
+#post-content p {
+    margin-top: 0;
+    text-align: justify;
+}
 /* Footer */
 .site-footer {
   text-align: center;
