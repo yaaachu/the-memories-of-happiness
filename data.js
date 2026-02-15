@@ -46,6 +46,7 @@ const posts = [
     title: "PEAK TIME CONCER [YOUR TIME] IN TAIPEI",
     date: "2023 / 07 / 15",
     venue: "",
+    tags: ["VANNER", "SEVENUS", "M.O.N.T", "콘서트"],
     content: `
     `
   },
@@ -54,6 +55,7 @@ const posts = [
     title: "M.O.N.T FAN CON in TAIPEI 《Will you be my mint?》",
     date: "2023 / 09 / 09",
     venue: "",
+    tags: ["M.O.N.T", "콘서트"],
     content: `
     `
   },
@@ -62,6 +64,7 @@ const posts = [
     title: "Restrart in Taipei",
     date: "2024 / 05 / 04",
     venue: "",
+    tags: ["규현", "콘서트"],
     content: `
     `
   },
@@ -70,6 +73,7 @@ const posts = [
     title: "2024 VANNER 1st CONCERT [THE FLAG:A TO V] IN TAIPEI",
     date: "2024 / 05 / 10",
     venue: "",
+    tags: ["VANNER", "콘서트"],
     content: `
     `
   },
@@ -78,6 +82,7 @@ const posts = [
     title: "BEST OF MONT Mini Concert in Taipei",
     date: "2024 / 05 / 24",
     venue: "",
+    tags: ["M.O.N.T", "콘서트"],
     content: `
     `
   },
@@ -86,6 +91,7 @@ const posts = [
     title: "M.O.N.T [ON MY WAY TO YOU] CONCERT in Taipei",
     date: "2025 / 01 / 18",
     venue: "",
+    tags: ["M.O.N.T", "콘서트"],
     content: `
     `
   },
@@ -94,6 +100,7 @@ const posts = [
     title: "J-hope tour 'HOPE ON THE STAGE' in TAIPEI",
     date: "2025 / 05 / 25 18:00",
     venue: "📍國立體育大學綜合體育館（林口體育館）",
+    tags: ["J-hope", "콘서트"],
     link: "20250525.html"
   },
   {
@@ -101,6 +108,7 @@ const posts = [
     title: "MONTHLY MONT SPECIAL EDITION IN TAIPEI",
     date: "2025 / 09 / 06",
     venue: "",
+    tags: ["M.O.N.T", "콘서트"],
     content: `
     `
   },
@@ -109,6 +117,7 @@ const posts = [
     title: "M.O.N.T WINTER CONCERT 'A DECEMBER TO CELEBRATE' in TAIPEI",
     date: "2025 / 12 / 25",
     venue: "",
+    tags: ["M.O.N.T", "콘서트"],
     content: `
     `
   }
