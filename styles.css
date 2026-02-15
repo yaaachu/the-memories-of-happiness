@@ -194,6 +194,11 @@ body {
   text-decoration: underline;
 }
 
+#toc li.toc-sub {
+  margin-left: 20px;
+  font-size: 14px;
+  opacity: 0.85;
+}
 /* =====================
    後記紙張本體
 ===================== */
