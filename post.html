@@ -95,7 +95,7 @@
   function generateTOC() {
     const tocWrapper = document.getElementById('toc');
     const tocList = tocWrapper.querySelector('ul');
-    const headings = document.querySelectorAll('#post-content h3');
+    const headings = document.querySelectorAll('#post-content h3, #post-content h4');
 
     if (!headings.length) {
       tocWrapper.style.display = 'none';
