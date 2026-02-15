@@ -195,8 +195,10 @@ body {
 
 #toc li.toc-sub {
   margin-left: 20px;
-  font-size: 9px;
   opacity: 0.85;
+}
+.post-toc li.toc-sub a {
+  font-size: 12px;
 }
 /* =====================
    後記紙張本體
