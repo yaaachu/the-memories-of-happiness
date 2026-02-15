@@ -5,7 +5,7 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Batang", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", "Batang" , serif;
   background: #f4f1ec; /* 紙張米色 */
   color: #2e2e2e;
   line-height: 1.8;
