@@ -244,22 +244,23 @@ body {
 }
 
 #post-content ul, ol {
-    margin-top: -7px;
-    padding-top: 0;
+  margin-top: -7px;
+  padding-top: 0;
 }
 #post-content li {
-    margin-bottom: -20px;
+  margin-bottom: -20px;
 }
 #post-content h3, h4 {
-    margin-bottom: -18px;
+  margin-bottom: -18px;
 }
 #post-content p {
-    margin-top: 0;
-    text-align: justify;
+  margin-top: 0;
+  text-align: justify;
 }
 #post-content h3.separator {
-    border-top: 1px dashed #ccc;
-    padding-top: 7px;
+  text-align: center;
+  border-top: 1px dashed #ccc;
+  padding-top: 7px;
 }
 /* Footer */
 .site-footer {
