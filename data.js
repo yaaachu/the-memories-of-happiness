@@ -122,7 +122,7 @@ const posts = [
     id: "20250906",
     title: "MONTHLY MONT SPECIAL EDITION IN TAIPEI",
     date: "2025 / 09 / 06",
-    venue: "Live House D",
+    venue: "📍Live House D",
     tags: ["M.O.N.T", "콘서트"],
     link: "20250906.html"
   },
