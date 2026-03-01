@@ -91,7 +91,7 @@ const posts = [
     title: "J-hope tour 'HOPE ON THE STAGE' in TAIPEI",
     date: "2025 / 05 / 25 18:00",
     venue: "📍國立體育大學綜合體育館（林口體育館）",
-    tags: ["J-hope", "콘서트"],
+    tags: ["J-hope", "BTS", "콘서트"],
     link: "20250525.html"
   },
   {
@@ -99,7 +99,7 @@ const posts = [
     title: "J-hope tour 'HOPE ON THE STAGE' in JAPAN: LIVE VIEWING",
     date: "2025 / 05 / 31",
     venue: "📍樹林秀泰影城 2廳",
-    tags: ["J-hope", "라이브뷰잉", "콘서트"],
+    tags: ["J-hope", "BTS", "라이브뷰잉", "콘서트"],
     link: "20250531.html"
   },
   {
@@ -107,7 +107,7 @@ const posts = [
     title: "#RUNSEOKJIN_EP.TOUR in JAPAN: LIVE VIEWING",
     date: "2025 / 07 / 12",
     venue: "📍新店裕隆城威秀影城 10廳",
-    tags: ["Jin", "라이브뷰잉", "콘서트"],
+    tags: ["Jin", "BTS", "라이브뷰잉", "콘서트"],
     link: "20250712.html"
   },
   {
@@ -115,7 +115,7 @@ const posts = [
     title: "#RUNSEOKJIN_EP.TOUR in AMSTERDAM: LIVE VIEWING",
     date: "2025 / 08 / 10",
     venue: "📍臺北信義威秀影城 3廳",
-    tags: ["Jin", "라이브뷰잉", "콘서트"],
+    tags: ["Jin", "BTS", "라이브뷰잉", "콘서트"],
     link: "20250810.html"
   },
   {
@@ -131,7 +131,7 @@ const posts = [
     title: "J-hope tour 'HOPE ON THE STAGE' THE MOVIE",
     date: "2025 / 11 / 16",
     venue: "📍中和環球威秀影城 9廳",
-    tags: ["J-hope", "영화", "콘서트"],
+    tags: ["J-hope", "BTS", "영화", "콘서트"],
     link: "20251116.html"
   },
   {
@@ -147,7 +147,23 @@ const posts = [
     title: "#RUNSEOKJIN_EP.TOUR THE MOVIE",
     date: "2025 / 12 / 27",
     venue: "📍臺北信義威秀影城 2廳",
-    tags: ["Jin", "영화", "콘서트"],
+    tags: ["Jin", "BTS", "영화", "콘서트"],
     link: "20251227.html"
+  },
+  {
+    id: "20260411",
+    title: "BTS WORLD TOUR ‘ARIRANG’ IN GOYANG LIVE VIEWING",
+    date: "2026 / 04 / 11",
+    venue: "📍新店裕隆城威秀影城 10廳",
+    tags: ["BTS", "라이브뷰잉", "콘서트"],
+    link: "20260411.html"
+  },
+  {
+    id: "20260418",
+    title: "BTS WORLD TOUR ‘ARIRANG’ IN JAPAN LIVE VIEWING",
+    date: "2026 / 04 / 18",
+    venue: "📍新店裕隆城威秀影城 10廳",
+    tags: ["BTS", "라이브뷰잉", "콘서트"],
+    link: "20260418.html"
   }
 ];
