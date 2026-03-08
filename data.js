@@ -41,7 +41,7 @@ const posts = [
   {
     id: "20230715",
     title: "PEAK TIME CONCER [YOUR TIME] IN TAIPEI",
-    date: "2023 / 07 / 15",
+    date: "2023 / 07 / 15  13:00",
     venue: "📍TICC 臺北國際會議中心",
     tags: ["VANNER", "SEVENUS", "M.O.N.T", "콘서트"],
     link: "20230715.html"
