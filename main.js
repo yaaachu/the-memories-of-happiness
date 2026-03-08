@@ -83,7 +83,7 @@ if (!posts || posts.length === 0) {
       const matchTags =
         activeTags.size === 0
           ? true
-          : post.tags?.some(tag => post.tags?.includes(tag));
+          : [...activeTags].every(tag => post.tags?.includes(tag));
 
       return matchYear && matchTags;
     });
