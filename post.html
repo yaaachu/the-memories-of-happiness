@@ -104,22 +104,49 @@
 
     tocList.innerHTML = '';
 
+    let currentH3Li = null;
+    let subList = null;
+
     headings.forEach((h, index) => {
       const id = `section-${index}`;
       h.id = id;
 
-      const li = document.createElement('li');
-      const a = document.createElement('a');
+      if (h.tagName === 'H3') {
+        const li = document.createElement('li');
+        const a = document.createElement('a');
 
-      a.href = `#${id}`;
-      a.textContent = h.dataset.toc || h.textContent;
+        a.href = `#${id}`;
+        a.textContent = h.textContent;
 
-      if (h.tagName === 'H4') {
-        li.classList.add('toc-sub');
+        li.appendChild(a);
+
+        // 建立子目錄容器
+        subList = document.createElement('ul');
+        subList.className = 'toc-sublist';
+
+        li.appendChild(subList);
+        tocList.appendChild(li);
+
+        currentH3Li = li;
+
+        // 點擊 H3 收合 H4
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          subList.classList.toggle('collapsed');
+          document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        });
+
+      } else if (h.tagName === 'H4' && subList) {
+        const li = document.createElement('li');
+        li.className = 'toc-sub';
+
+        const a = document.createElement('a');
+        a.href = `#${id}`;
+        a.textContent = h.textContent;
+
+        li.appendChild(a);
+        subList.appendChild(li);
       }
-      
-      li.appendChild(a);
-      tocList.appendChild(li);
     });
   }
 
