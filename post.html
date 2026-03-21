@@ -104,30 +104,29 @@
 
     tocList.innerHTML = '';
 
-    let currentH3Li = null;
     let subList = null;
 
     headings.forEach((h, index) => {
       const id = `section-${index}`;
       h.id = id;
 
+      const text = h.dataset.toc || h.textContent;
+      
       if (h.tagName === 'H3') {
         const li = document.createElement('li');
         const a = document.createElement('a');
 
         a.href = `#${id}`;
-        a.textContent = h.textContent;
+        a.textContent = text;
 
         li.appendChild(a);
 
         // 建立子目錄容器
         subList = document.createElement('ul');
-        subList.className = 'toc-sublist';
+        subList.className = 'toc-sublist collapsed';
 
         li.appendChild(subList);
         tocList.appendChild(li);
-
-        currentH3Li = li;
 
         // 點擊 H3 收合 H4
         a.addEventListener('click', (e) => {
@@ -142,7 +141,7 @@
 
         const a = document.createElement('a');
         a.href = `#${id}`;
-        a.textContent = h.textContent;
+        a.textContent = text;
 
         li.appendChild(a);
         subList.appendChild(li);
