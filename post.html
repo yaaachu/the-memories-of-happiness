@@ -105,7 +105,6 @@
     tocList.innerHTML = '';
 
     let subList = null;
-    let currentLi = null;
 
     headings.forEach((h, index) => {
       const id = `section-${index}`;
@@ -174,12 +173,16 @@
         a.textContent = text;
 
         li.appendChild(a);
-        subList.appendChild(li);
+        subList.appendChild(li);      
+      }
+    });
+      // ✅ 最後統一判斷：有子目錄才顯示箭頭
+    tocList.querySelectorAll('li').forEach(li => {
+      const sub = li.querySelector('.toc-sublist');
+      const arrow = li.querySelector('.toc-arrow');
 
-        // 👉 有 h4 才顯示箭頭
-        if (currentLi) {
-          currentLi.querySelector('.toc-arrow').style.visibility = 'visible';
-        }
+      if (sub && sub.children.length > 0) {
+        arrow.style.visibility = 'visible';
       }
     });
  }
