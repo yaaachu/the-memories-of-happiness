@@ -204,6 +204,20 @@ body {
   font-size: 0.85em;
 }
 
+/* h3 一行（箭頭 + 文字） */
+.toc-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+/* 箭頭 */
+.toc-arrow {
+  cursor: pointer;
+  font-size: 12px;
+  width: 14px;
+  display: inline-block;
+  color: #666;
+}
 /* 子目錄 */
 .toc-sublist {
   list-style: none;
