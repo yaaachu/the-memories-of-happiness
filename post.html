@@ -127,6 +127,7 @@
         const arrow = document.createElement('span');
         arrow.className = 'toc-arrow';
         arrow.textContent = '▶';
+        arrow.style.visibility = 'hidden';
 
         row.appendChild(arrow);
         row.appendChild(link);
@@ -180,11 +181,7 @@
         }
       }
     });
-    // 👉 預設隱藏所有箭頭（沒有 h4 的）
-    document.querySelectorAll('.toc-arrow').forEach(arrow => {
-      arrow.style.visibility = 'hidden';
-    });
-  }
+ }
 
 </script>
 
