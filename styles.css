@@ -203,6 +203,26 @@ body {
 .post-toc li.toc-sub a {
   font-size: 0.85em;
 }
+
+/* 子目錄 */
+.toc-sublist {
+  list-style: none;
+  padding-left: 16px;
+  margin-top: 4px;
+}
+/* 子項目 */
+.toc-sub {
+  margin-bottom: 4px;
+}
+/* 收合狀態 */
+.toc-sublist.collapsed {
+  display: none;
+}
+/* 子目錄字體 */
+.toc-sub a {
+  font-size: 13px;
+  opacity: 0.85;
+}
 /* =====================
    後記紙張本體
 ===================== */
