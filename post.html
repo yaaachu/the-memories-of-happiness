@@ -131,23 +131,20 @@
 
         row.appendChild(arrow);
         row.appendChild(link);
-
         li.appendChild(row);
 
         // 建立子目錄容器
-        subList = document.createElement('ul');
-        subList.className = 'toc-sublist collapsed';
+        const thisSubList = document.createElement('ul');
+        thisSubList.className = 'toc-sublist collapsed';
 
-        li.appendChild(subList);
+        li.appendChild(thisSubList);
         tocList.appendChild(li);
-
-        currentLi = li;
 
         // 👉 點箭頭才展開
         arrow.addEventListener('click', (e) => {
           e.stopPropagation();
 
-          const isCollapsed = subList.classList.contains('collapsed');
+          const isCollapsed = thisSubList.classList.contains('collapsed');
 
           // 🔥 關閉全部
           document.querySelectorAll('.toc-sublist').forEach(ul => {
@@ -159,10 +156,13 @@
 
           // 🔥 開當前
           if (isCollapsed) {
-            subList.classList.remove('collapsed');
+            thisSubList.classList.remove('collapsed');
             arrow.textContent = '▼';
           }
         });
+       
+        // 👉 更新目前 subList（給 h4 用）
+        subList = thisSubList;
 
       } else if (h.tagName === 'H4' && subList) {
         const li = document.createElement('li');
