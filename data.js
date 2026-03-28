@@ -49,7 +49,7 @@ const posts = [
   {
     id: "20230909",
     title: "M.O.N.T FAN CON in TAIPEI 《Will you be my mint?》",
-    date: "2023 / 09 / 09",
+    date: "2023 / 09 / 09  18:00",
     venue: "📍TICC 臺北國際會議中心",
     tags: ["M.O.N.T", "콘서트"],
     link: "20230909.html"
