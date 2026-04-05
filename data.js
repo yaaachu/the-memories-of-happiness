@@ -57,7 +57,7 @@ const posts = [
   {
     id: "20240504",
     title: "Restrart in Taipei",
-    date: "2024 / 05 / 04",
+    date: "2024 / 05 / 04 17:00",
     venue: "📍新北工商展覽中心",
     tags: ["규현", "콘서트"],
     link: "20240504.html"
