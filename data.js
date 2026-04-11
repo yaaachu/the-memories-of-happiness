@@ -65,7 +65,7 @@ const posts = [
   {
     id: "20240510",
     title: "2024 VANNER 1st CONCERT [THE FLAG:A TO V] IN TAIPEI",
-    date: "2024 / 05 / 10",
+    date: "2024 / 05 / 10 19:30",
     venue: "📍Zepp New Taipei",
     tags: ["VANNER", "콘서트"],
     link: "20240510.html"
@@ -73,7 +73,7 @@ const posts = [
   {
     id: "20240524",
     title: "BEST OF MONT Mini Concert in Taipei",
-    date: "2024 / 05 / 24",
+    date: "2024 / 05 / 24 19:00",
     venue: "📍花漾展演空間 HANA SPACE",
     tags: ["M.O.N.T", "콘서트"],
     link: "20240524.html"
@@ -81,7 +81,7 @@ const posts = [
   {
     id: "20250118",
     title: "M.O.N.T [ON MY WAY TO YOU] CONCERT in Taipei",
-    date: "2025 / 01 / 18",
+    date: "2025 / 01 / 18 14:00 ; 19:00",
     venue: "📍Clapper Studio",
     tags: ["M.O.N.T", "콘서트"],
     link: "20250118.html"
@@ -97,7 +97,7 @@ const posts = [
   {
     id: "20250531",
     title: "J-hope tour 'HOPE ON THE STAGE' in JAPAN: LIVE VIEWING",
-    date: "2025 / 05 / 31",
+    date: "2025 / 05 / 31 17:15",
     venue: "📍樹林秀泰影城 2廳",
     tags: ["J-hope", "BTS", "라이브뷰잉", "콘서트"],
     link: "20250531.html"
@@ -105,7 +105,7 @@ const posts = [
   {
     id: "20250712",
     title: "#RUNSEOKJIN_EP.TOUR in JAPAN: LIVE VIEWING",
-    date: "2025 / 07 / 12",
+    date: "2025 / 07 / 12 17:45",
     venue: "📍新店裕隆城威秀影城 10廳",
     tags: ["Jin", "BTS", "라이브뷰잉", "콘서트"],
     link: "20250712.html"
@@ -113,7 +113,7 @@ const posts = [
   {
     id: "20250810",
     title: "#RUNSEOKJIN_EP.TOUR in AMSTERDAM: LIVE VIEWING",
-    date: "2025 / 08 / 10",
+    date: "2025 / 08 / 10 14:05",
     venue: "📍臺北信義威秀影城 3廳",
     tags: ["Jin", "BTS", "라이브뷰잉", "콘서트"],
     link: "20250810.html"
@@ -121,7 +121,7 @@ const posts = [
   {
     id: "20250906",
     title: "MONTHLY MONT SPECIAL EDITION IN TAIPEI",
-    date: "2025 / 09 / 06",
+    date: "2025 / 09 / 06 13:00 , 18:00",
     venue: "📍Live House D",
     tags: ["M.O.N.T", "콘서트"],
     link: "20250906.html"
@@ -129,7 +129,7 @@ const posts = [
   {
     id: "20251116",
     title: "J-hope tour 'HOPE ON THE STAGE' THE MOVIE",
-    date: "2025 / 11 / 16",
+    date: "2025 / 11 / 16 14:00",
     venue: "📍中和環球威秀影城 9廳",
     tags: ["J-hope", "BTS", "영화", "콘서트"],
     link: "20251116.html"
@@ -137,7 +137,7 @@ const posts = [
   {
     id: "20251225",
     title: "M.O.N.T WINTER CONCERT 'A DECEMBER TO CELEBRATE' in TAIPEI",
-    date: "2025 / 12 / 25",
+    date: "2025 / 12 / 25 13:00",
     venue: "📍花漾展演空間 HANA SPACE",
     tags: ["M.O.N.T", "콘서트"],
     link: "20251225.html"
@@ -145,7 +145,7 @@ const posts = [
   {
     id: "20251227",
     title: "#RUNSEOKJIN_EP.TOUR THE MOVIE",
-    date: "2025 / 12 / 27",
+    date: "2025 / 12 / 27 12:40",
     venue: "📍臺北信義威秀影城 2廳",
     tags: ["Jin", "BTS", "영화", "콘서트"],
     link: "20251227.html"
@@ -153,7 +153,7 @@ const posts = [
   {
     id: "20260411",
     title: "BTS WORLD TOUR ‘ARIRANG’ IN GOYANG LIVE VIEWING",
-    date: "2026 / 04 / 11",
+    date: "2026 / 04 / 11 17:45",
     venue: "📍新店裕隆城威秀影城 10廳",
     tags: ["BTS", "라이브뷰잉", "콘서트"],
     link: "20260411.html"
@@ -161,7 +161,7 @@ const posts = [
   {
     id: "20260418",
     title: "BTS WORLD TOUR ‘ARIRANG’ IN JAPAN LIVE VIEWING",
-    date: "2026 / 04 / 18",
+    date: "2026 / 04 / 18 13:45",
     venue: "📍新店裕隆城威秀影城 10廳",
     tags: ["BTS", "라이브뷰잉", "콘서트"],
     link: "20260418.html"
