@@ -81,7 +81,7 @@ const posts = [
   {
     id: "20250118",
     title: "M.O.N.T [ON MY WAY TO YOU] CONCERT in Taipei",
-    date: "2025 / 01 / 18 14:00 ; 19:00",
+    date: "2025 / 01 / 18 14:00 , 19:00",
     venue: "📍Clapper Studio",
     tags: ["M.O.N.T", "콘서트"],
     link: "20250118.html"
