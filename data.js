@@ -165,5 +165,13 @@ const posts = [
     venue: "📍新店裕隆城威秀影城 10廳",
     tags: ["BTS", "라이브뷰잉", "콘서트"],
     link: "20260418.html"
+  },
+  {
+    id: "20260613",
+    title: "BTS WORLD TOUR ‘ARIRANG’ IN BUSAN LIVE VIEWING",
+    date: "2026 / 06 / 13 17:45",
+    venue: "📍新店裕隆城威秀影城 10廳",
+    tags: ["BTS", "라이브뷰잉", "콘서트"],
+    link: "20260613.html"
   }
 ];
