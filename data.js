@@ -203,7 +203,7 @@ const posts = [
     title: "BTS WORLD TOUR ‘ARIRANG’ IN KAOHSIUNG",
     date: "2026 / 11 / 19 19:00",
     venue: "📍高雄國家體育場 (世運主場館)",
-    tags: ["BTS", "라이브뷰잉", "콘서트"],
+    tags: ["BTS", "콘서트"],
     link: "20261119.html"
   }
 ];
